@@ -4,7 +4,7 @@ Let's use 👁🐍🧰[itk](https://insightsoftwareconsortium.github.io/itk-js/i
 
 This is a plugin for [@craco/craco](https://github.com/sharegate/craco).
 
-## Very very easy usage
+## Usage
 
 ### 1. Create a React project
 

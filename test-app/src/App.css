@@ -31,3 +31,37 @@
     transform: rotate(360deg);
   }
 }
+
+.file-information {
+  resize: none;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  width: 80%;
+  height: 25em;
+  bottom: 0px;
+  left: 0px;
+  top: 50px;
+}
+
+.file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #222;
+}
+.file-upload:hover {
+  background-color: #393;
+}
+.file-upload:focus {
+  background-color: #393;
+}
+
+input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
