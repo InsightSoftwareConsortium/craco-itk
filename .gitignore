@@ -1,1 +1,3 @@
 node_modules
+test-app/.env
+test-app/package-lock.json
