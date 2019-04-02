@@ -1,0 +1,19 @@
+{
+  "name": "craco-itk",
+  "version": "1.0.0",
+  "description": "Let's use ITK with create-react-app today!",
+  "main": "index.js",
+  "repository": "https://github.com/InsightSoftwareConsortium/craco-itk.git",
+  "author": "Matt McCormick <matt.mccormick@kitware.com>",
+  "license": "Apache-2.0",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "copy-webpack-plugin": "^5.0.1"
+  },
+  "peerDependencies": {
+    "@craco/craco": "*",
+    "itk": "*"
+  }
+}
