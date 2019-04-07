@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import readImageFile from 'itk/readImageFile'
+import readFile from 'itk/readFile'
 
 class App extends Component {
   constructor(props) {
@@ -22,8 +22,10 @@ class App extends Component {
     const files = this.fileInput.current.files || dataTransfer.files;
 
     const app = this
-    return readImageFile(null, files[0]).then(function({ image, webWorker }) {
+    console.log(files[0])
+    return readFile(null, files[0]).then(function({ image, mesh, webWorker }) {
       webWorker.terminate();
+      const imageOrMesh = image || mesh
 
       function replacer(key, value) {
         if (!!value && value.byteLength !== undefined) {
@@ -31,7 +33,7 @@ class App extends Component {
         }
         return value;
       }
-      app.setState({fileInformation: JSON.stringify(image, replacer, 4)})
+      app.setState({fileInformation: JSON.stringify(imageOrMesh, replacer, 4)})
     });
   }
 
@@ -42,7 +44,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <div>
-            <label className="file-upload" htmlFor="inputFile">Select Image File</label>
+            <label className="file-upload" htmlFor="inputFile">Select Image or Mesh File</label>
             <input id="inputFile" name="inputFile" type="file" ref={this.fileInput} onChange={this.processFile}></input>
           </div>
           <textarea readOnly ref={this.outputTextArea} className="file-information" value={this.state.fileInformation}></textarea>

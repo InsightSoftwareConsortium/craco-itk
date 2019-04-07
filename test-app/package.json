@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^3.6.0",
-    "itk": "^9.4.1",
+    "itk": "^9.5.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"
