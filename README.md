@@ -4,6 +4,12 @@ Let's use 👁🐍🧰[itk](https://insightsoftwareconsortium.github.io/itk-js/i
 
 This is a plugin for [@craco/craco](https://github.com/sharegate/craco).
 
+<a href="https://glitch.com/edit/#!/remix/craco-itk">
+Try it!&nbsp;
+<img
+src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726"
+alt="try it" height="20"></a>
+
 ## Usage
 
 ### 1. Create a React project
