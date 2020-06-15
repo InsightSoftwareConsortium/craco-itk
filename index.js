@@ -25,6 +25,10 @@ module.exports = () => ({
         {
           from: path.join(itkSource, 'MeshIOs'),
           to: path.join(itkDestination, 'MeshIOs')
+        },
+        {
+          from: path.join(itkSource, 'PolyDataIOs'),
+          to: path.join(itkDestination, 'PolyDataIOs')
         }
       ])
     );
