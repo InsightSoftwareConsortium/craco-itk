@@ -2,7 +2,7 @@ const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = () => ({
-  overrideWebpackConfig: ({ webpackConfig, context: { env } }) => {
+  overrideWebpackConfig: ({ webpackConfig, context: { env, paths } }) => {
     //console.log(webpackConfig)
     webpackConfig.node = {
       ...webpackConfig.node,
@@ -33,6 +33,9 @@ module.exports = () => ({
       ])
     );
 
+    webpackConfig.resolve.alias['./itkConfig$'] = path.resolve(__dirname, 'itkConfig.js')
+
     return webpackConfig;
-  }
+  },
+
 });
