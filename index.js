@@ -10,8 +10,8 @@ module.exports = () => ({
       fs: "empty"
     };
 
-    const itkSource = path.join('node_modules', 'itk');
-    const itkDestination = 'itk';
+    const itkSource = path.join(paths.appNodeModules, 'itk');
+    const itkDestination = path.join(paths.appBuild, 'itk');
     webpackConfig.plugins.push(
       new CopyWebpackPlugin([
         {
