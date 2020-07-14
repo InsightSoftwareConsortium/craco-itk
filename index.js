@@ -38,4 +38,13 @@ module.exports = () => ({
     return webpackConfig;
   },
 
+  overrideDevServerConfig: ({ devServerConfig, cracoConfig, pluginOptions, context: { env, paths, allowedHost } }) => {
+
+    // For the itk.js modules
+    devServerConfig.contentBase = [devServerConfig.contentBase, paths.appNodeModules]
+
+    // Always return the config object.
+    return devServerConfig;
+  }
+
 });
