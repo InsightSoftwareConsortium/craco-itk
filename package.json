@@ -1,6 +1,6 @@
 {
   "name": "craco-itk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Let's use ITK with create-react-app today!",
   "main": "index.js",
   "repository": "https://github.com/InsightSoftwareConsortium/craco-itk.git",
