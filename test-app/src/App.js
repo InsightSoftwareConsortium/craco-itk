@@ -23,9 +23,9 @@ class App extends Component {
 
     const app = this
     console.log(files[0])
-    return readFile(null, files[0]).then(function({ image, mesh, webWorker }) {
+    return readFile(null, files[0]).then(function({ image, mesh, polyData, webWorker }) {
       webWorker.terminate();
-      const imageOrMesh = image || mesh
+      const imageOrMeshOrPolyData = image || mesh || polyData
 
       function replacer(key, value) {
         if (!!value && value.byteLength !== undefined) {
@@ -33,7 +33,7 @@ class App extends Component {
         }
         return value;
       }
-      app.setState({fileInformation: JSON.stringify(imageOrMesh, replacer, 4)})
+      app.setState({fileInformation: JSON.stringify(imageOrMeshOrPolyData, replacer, 4)})
     });
   }
 
