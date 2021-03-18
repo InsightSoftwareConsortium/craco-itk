@@ -15,8 +15,7 @@ alt="try it" height="20"></a>
 ### 1. Create a React project
 
 ```sh
-npm install -g create-react-app # or yarn global add create-react-app
-create-react-app example
+npx create-react-app example
 cd example
 ```
 
