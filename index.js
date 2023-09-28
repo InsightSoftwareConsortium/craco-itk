@@ -3,13 +3,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = () => ({
   overrideWebpackConfig: ({ webpackConfig, context: { env, paths } }) => {
-    //console.log(webpackConfig)
-    webpackConfig.node = {
-      ...webpackConfig.node,
-      // Resolve node module use of fs
-      fs: "empty"
-    };
-
     const itkSource = path.join(paths.appNodeModules, 'itk');
     const itkDestination = path.join(paths.appBuild, 'itk');
     webpackConfig.plugins.push(
