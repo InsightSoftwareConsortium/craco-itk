@@ -11,10 +11,10 @@
     "itkConfig.js"
   ],
   "dependencies": {
-    "copy-webpack-plugin": "^5.0.1"
+    "copy-webpack-plugin": "^11.0.0"
   },
   "peerDependencies": {
-    "@craco/craco": "*",
+    "@craco/craco": "^7.0.0",
     "itk": "*"
   }
 }
